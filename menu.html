@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Rasa & Toko Pint — Nectar Artisan Ice Cream</title>
+  <meta name="description" content="Pilihan rasa es krim artisan hand-churned, sorbet vegan, dan paket pint delivery es krim segar beku dengan insulated thermal dry-ice box.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍨</text></svg>">
+</head>
+<body class="bg-grid-pattern">
+
+  <div class="side-brand-tag left">Handcrafted Small-Batch Flavors</div>
+  <div class="side-brand-tag right">Nectar Creamery Online Shop</div>
+
+  <div class="site-frame">
+    <!-- Top Announcement Bar -->
+    <div class="top-ticker">
+      <span>📦 GRATIS ONGKIR & PACKAGING DRY ICE UNTUK PEMBELIAN MINIMAL 3 PINT!</span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="header-nav">
+      <div class="nav-container">
+        <!-- Desktop Nav Left -->
+        <nav class="nav-left" aria-label="Main Navigation Left">
+          <a href="index.html#schedule" class="nav-link">Temukan Gerobak</a>
+          <a href="index.html#catering" class="nav-link">Book Catering</a>
+        </nav>
+
+        <!-- Brand Logo -->
+        <a href="index.html" class="brand-logo" aria-label="Nectar Home">nectar</a>
+
+        <!-- Desktop Nav Right -->
+        <nav class="nav-right" aria-label="Main Navigation Right">
+          <a href="menu.html" class="nav-link active">Menu Rasa</a>
+          <a href="index.html#club" class="nav-link">Scoop Club</a>
+          <button class="cart-btn js-open-cart" aria-label="Buka Keranjang">
+            <span>🛒</span>
+            <span>Pesanan</span>
+            <span class="cart-count">0</span>
+          </button>
+        </nav>
+
+        <!-- Mobile Nav Toggle Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Buka Menu Navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Beranda</a>
+        <a href="menu.html" class="mobile-nav-link" style="color: #EE6A86;">Menu & Toko Pint</a>
+        <a href="index.html#schedule" class="mobile-nav-link">Temukan Gerobak</a>
+        <a href="index.html#catering" class="mobile-nav-link">Catering & Event</a>
+        <a href="index.html#club" class="mobile-nav-link">The Scoop Club</a>
+      </div>
+      <div>
+        <button class="btn-pill btn-maroon js-open-cart" style="width: 100%; margin-bottom: 12px;">
+          🛒 Buka Keranjang (<span class="cart-count">0</span>)
+        </button>
+        <p style="font-size: 0.75rem; color: var(--color-text-muted); text-align: center;">
+          Hand-Churned with Love • Organic Dairy
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN MENU PAGE CONTENT -->
+    <main>
+      <!-- MENU HERO -->
+      <section class="menu-hero">
+        <div class="container">
+          <span class="tagline-caps">( CHURNED FRESH DAILY IN SMALL BATCHES )</span>
+          <h1 class="title">Koleksi Rasa & Toko Pint</h1>
+          <p class="desc">
+            Dibuat dari susu sapi organik padang rumput segar, buah-buahan lokal matang pohon, dan bahan botani murni tanpa perisa artifisial maupun bahan pengawet kimiawi.
+          </p>
+
+          <!-- Badges -->
+          <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
+            <span style="font-size: 0.75rem; font-weight: 700; background: var(--color-peach-light); border: 1px solid var(--color-maroon); padding: 4px 14px; border-radius: var(--radius-pill); color: var(--color-maroon);">
+              🌱 100% BAHAN ALAMI
+            </span>
+            <span style="font-size: 0.75rem; font-weight: 700; background: var(--color-pink-soft); border: 1px solid var(--color-maroon); padding: 4px 14px; border-radius: var(--radius-pill); color: var(--color-maroon);">
+              ❄️ AMAN SAMPAI 6 JAM (DRY ICE)
+            </span>
+            <span style="font-size: 0.75rem; font-weight: 700; background: var(--color-periwinkle-light); border: 1px solid var(--color-maroon); padding: 4px 14px; border-radius: var(--radius-pill); color: var(--color-maroon);">
+              🍦 CONE WAFFLE HANDMADE
+            </span>
+          </div>
+
+          <!-- Category Filter Tabs -->
+          <div class="filter-tabs-wrapper" role="tablist">
+            <button class="filter-tab active" data-category="all">Semua Koleksi (12)</button>
+            <button class="filter-tab" data-category="classic">Klasik Signature</button>
+            <button class="filter-tab" data-category="seasonal">Edisi Musiman</button>
+            <button class="filter-tab" data-category="vegan">Vegan & Sorbet</button>
+            <button class="filter-tab" data-category="bundle">Paket Pint Box</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLAVORS GRID -->
+      <section style="padding-bottom: 50px;">
+        <div class="container">
+          <div class="flavor-grid">
+
+            <!-- Flavor 1 -->
+            <article class="flavor-card" data-category="classic">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=600&auto=format&fit=crop&q=80" alt="Wild Strawberry Shortcake" class="flavor-img">
+                <span class="flavor-badge-tag">BEST SELLER</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">GF</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Wild Strawberry Shortcake</h3>
+                <p class="flavor-tasting-notes">
+                  Puree stroberi segar lokal berpadu remah biskuit shortbread mentega gurih dan krim susu vanila lembut.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 42.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 110rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-strawberry', name: 'Wild Strawberry Shortcake', variant: 'Pint 500ml', price: 110000, img: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 2 -->
+            <article class="flavor-card" data-category="classic">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&auto=format&fit=crop&q=80" alt="Roasted Sicilian Pistachio Brioche" class="flavor-img">
+                <span class="flavor-badge-tag">CHEF'S PICK</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">NUTS</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Roasted Pistachio Brioche</h3>
+                <p class="flavor-tasting-notes">
+                  Pasta pistachio asli dari Bronte Sisilia yang dipanggang lambat, dipadu remahan roti brioche karamel mentega.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 45.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 125rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-pistachio', name: 'Roasted Pistachio Brioche', variant: 'Pint 500ml', price: 125000, img: 'https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 3 -->
+            <article class="flavor-card" data-category="classic">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=600&auto=format&fit=crop&q=80" alt="Tahitian Vanilla & Salted Honeycomb" class="flavor-img">
+                <span class="flavor-badge-tag">FAVORIT</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">GF</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Tahitian Vanilla & Honeycomb</h3>
+                <p class="flavor-tasting-notes">
+                  Biji vanila asli Tahiti bermutu tinggi dengan remahan toffee madu sarang lebah gosong yang renyah dan gurih.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 40.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 105rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-vanilla', name: 'Tahitian Vanilla & Honeycomb', variant: 'Pint 500ml', price: 105000, img: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 4 -->
+            <article class="flavor-card" data-category="classic">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=600&auto=format&fit=crop&q=80" alt="72% Midnight Dark Fudge Brownie" class="flavor-img">
+                <span class="flavor-badge-tag">INTENSE</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">RICH</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">72% Dark Fudge Brownie</h3>
+                <p class="flavor-tasting-notes">
+                  Cokelat pekat Valrhona 72% dengan pita saus fudge leleh hangat dan potongan chewy brownie panggang oven.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 42.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 115rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-chocolate', name: '72% Dark Fudge Brownie', variant: 'Pint 500ml', price: 115000, img: 'https://images.unsplash.com/photo-1580915411954-282cb1b0d780?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 5 -->
+            <article class="flavor-card" data-category="seasonal">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1560801619-01d71da0f70c?w=600&auto=format&fit=crop&q=80" alt="Lavender Earl Grey & Wildflower Honey" class="flavor-img">
+                <span class="flavor-badge-tag" style="background:#DCE3FD;">EDISI MUSIMAN</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">FLORAL</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Lavender Earl Grey & Honey</h3>
+                <p class="flavor-tasting-notes">
+                  Ekstrak seduhan teh Earl Grey bergamot dengan bunga lavender Provence Prancis dan madu murni hutan tropis.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 45.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 120rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-earlgrey', name: 'Lavender Earl Grey & Honey', variant: 'Pint 500ml', price: 120000, img: 'https://images.unsplash.com/photo-1560801619-01d71da0f70c?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 6 -->
+            <article class="flavor-card" data-category="seasonal">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=600&auto=format&fit=crop&q=80" alt="Peach Jasmine Blossom" class="flavor-img">
+                <span class="flavor-badge-tag" style="background:#FDE8EB;">EDISI MUSIMAN</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">GF</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Peach & White Jasmine</h3>
+                <p class="flavor-tasting-notes">
+                  Buah persik putih manis direbus lambat bersama kelopak melati mekar, aroma floral yang anggun dan menyegarkan.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 45.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 120rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-peach', name: 'Peach & White Jasmine', variant: 'Pint 500ml', price: 120000, img: 'https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 7 -->
+            <article class="flavor-card" data-category="seasonal">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=600&auto=format&fit=crop&q=80" alt="Matcha White Chocolate Stracciatella" class="flavor-img">
+                <span class="flavor-badge-tag">JAPAN IMPORT</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">GF</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Matcha Stracciatella</h3>
+                <p class="flavor-tasting-notes">
+                  Matcha ceremonial Uji Kyoto dengan serpihan cokelat putih renyah yang meleleh lembut di lidah.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 45.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 125rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-matcha', name: 'Matcha Stracciatella', variant: 'Pint 500ml', price: 125000, img: 'https://images.unsplash.com/photo-1505394033641-40c6ad1178d7?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 8 -->
+            <article class="flavor-card" data-category="classic">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=600&auto=format&fit=crop&q=80" alt="Espresso Brown Butter Biscotti" class="flavor-img">
+                <span class="flavor-badge-tag">BOLD COFFEE</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">CRUNCH</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Espresso Butter Biscotti</h3>
+                <p class="flavor-tasting-notes">
+                  Cold brew konsentrat kopi Arabica Flores berpadu mentega gosong gurih dan remahan biskuit almond biscotti.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 42.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 115rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-espresso', name: 'Espresso Butter Biscotti', variant: 'Pint 500ml', price: 115000, img: 'https://images.unsplash.com/photo-1517256064527-09c73fc73e38?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 9 -->
+            <article class="flavor-card" data-category="vegan">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1557142046-c704a3adf364?w=600&auto=format&fit=crop&q=80" alt="Yuzu Lemon Basil Sorbet" class="flavor-img">
+                <span class="flavor-badge-tag" style="background:#CBEAD8;">VEGAN SORBET</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">VEGAN</span>
+                  <span class="dietary-tag">DF</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Yuzu Lemon Basil Sorbet</h3>
+                <p class="flavor-tasting-notes">
+                  Sari jeruk Yuzu Jepang asli dan lemon segar berpadu daun basil kebun. Bebas susu (dairy-free) dan sangat menyegarkan.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 38.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 105rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-yuzu', name: 'Yuzu Lemon Basil Sorbet', variant: 'Pint 500ml (Vegan)', price: 105000, img: 'https://images.unsplash.com/photo-1557142046-c704a3adf364?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 10 -->
+            <article class="flavor-card" data-category="vegan">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=600&auto=format&fit=crop&q=80" alt="Alphonso Mango Passionfruit Sorbet" class="flavor-img">
+                <span class="flavor-badge-tag" style="background:#FAD4A8;">VEGAN SORBET</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">VEGAN</span>
+                  <span class="dietary-tag">GF</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Mango Passionfruit Silk</h3>
+                <p class="flavor-tasting-notes">
+                  Mangga Alphonso tropis manis lezat dengan pusaran buah markisa asam segar alami, tekstur sehalus sutra.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 38.000</span>
+                    <span class="flavor-size-select">Single Scoop / Pint Rp 105rb</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'f-mango', name: 'Mango Passionfruit Silk', variant: 'Pint 500ml (Vegan)', price: 105000, img: 'https://images.unsplash.com/photo-1590080875515-8a3a8dc5735e?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN PINT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 11 (Bundle Box) -->
+            <article class="flavor-card" data-category="bundle">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=600&auto=format&fit=crop&q=80" alt="The 4-Pint Taster Box" class="flavor-img">
+                <span class="flavor-badge-tag" style="background:#E63956; color:#FFF;">HEMAT 15%</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">4 PINTS</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">The 4-Pint Taster Box</h3>
+                <p class="flavor-tasting-notes">
+                  Paket 4 rasa pint pilihan bebas, gratis 4 waffle cone renyah, sendok kayu ramah lingkungan, dan styrofoam cooler box.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 395.000</span>
+                    <span class="flavor-size-select">Isi 4 Pint (Total 2000ml)</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'bundle-4pint', name: 'The 4-Pint Taster Box', variant: 'Pilihan Bebas + 4 Cone', price: 395000, img: 'https://images.unsplash.com/photo-1576506295286-5cda18df43e7?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN BUNDLE
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- Flavor 12 (Party Bundle) -->
+            <article class="flavor-card" data-category="bundle">
+              <div class="flavor-img-wrap">
+                <img src="https://images.unsplash.com/photo-1587314168485-3236d6710814?w=600&auto=format&fit=crop&q=80" alt="Family Party Kit (8 Pints + Toppings)" class="flavor-img">
+                <span class="flavor-badge-tag" style="background:#B8C6F8;">ULTIMATE PARTY</span>
+                <div class="dietary-icons">
+                  <span class="dietary-tag">8 PINTS</span>
+                </div>
+              </div>
+              <div class="flavor-details">
+                <h3 class="flavor-name">Family Party Ice Cream Kit</h3>
+                <p class="flavor-tasting-notes">
+                  8 pint es krim artisan, 2 jar saus leleh (Hot Fudge & Salted Caramel), 1 toples honeycomb crunch, 8 cone, dan scoop stainless.
+                </p>
+                <div class="flavor-bottom-action">
+                  <div>
+                    <span class="flavor-price">Rp 780.000</span>
+                    <span class="flavor-size-select">Pesta 15-20 Orang</span>
+                  </div>
+                  <button class="btn-pill btn-maroon" style="padding: 6px 14px; font-size: 0.78rem;" onclick="addToCart({id: 'bundle-party', name: 'Family Party Ice Cream Kit', variant: '8 Pints + Topping Jars', price: 780000, img: 'https://images.unsplash.com/photo-1587314168485-3236d6710814?w=150&auto=format&fit=crop&q=80'})">
+                    + PESAN KIT
+                  </button>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- INTERACTIVE SUNDAE STUDIO BUILDER -->
+      <section class="container" id="sundaeStudio">
+        <div class="sundae-builder-section">
+          <span class="tagline-caps" style="display: block; text-align: center;">CUSTOM ICE CREAM EXPERIENCE</span>
+          <h2 class="builder-title">The Sundae Studio</h2>
+          <p class="builder-subtitle">
+            Rakit mangkuk atau cone es krim impianmu sesuai selera dengan kombinasi scoop artisan dan gourmet toppings!
+          </p>
+
+          <div class="builder-layout">
+            <!-- Customizer Controls -->
+            <div class="builder-controls">
+              <!-- Step 1: Vessel -->
+              <div class="builder-step">
+                <div class="step-heading">
+                  <span class="step-num">1</span>
+                  <span>Pilih Wadah Es Krim (Vessel):</span>
+                </div>
+                <div class="options-pill-group">
+                  <button class="option-btn js-vessel-btn selected" data-name="Handmade Waffle Cone" data-price="8000">
+                    🍦 Handmade Waffle Cone (+8rb)
+                  </button>
+                  <button class="option-btn js-vessel-btn" data-name="Biodegradable Cup" data-price="0">
+                    🍨 Eco Paper Cup (+0rb)
+                  </button>
+                  <button class="option-btn js-vessel-btn" data-name="Warm Toasted Brioche Bun" data-price="15000">
+                    🍞 Warm Brioche Sandwich (+15rb)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2: Scoop 1 -->
+              <div class="builder-step">
+                <div class="step-heading">
+                  <span class="step-num">2</span>
+                  <span>Pilih Scoop Pertama:</span>
+                </div>
+                <div class="options-pill-group">
+                  <button class="option-btn js-scoop1-btn selected" data-name="Wild Strawberry Shortcake">
+                    🍓 Wild Strawberry Shortcake
+                  </button>
+                  <button class="option-btn js-scoop1-btn" data-name="Roasted Sicilian Pistachio">
+                    🌰 Roasted Sicilian Pistachio
+                  </button>
+                  <button class="option-btn js-scoop1-btn" data-name="72% Dark Fudge Brownie">
+                    🍫 72% Dark Fudge Brownie
+                  </button>
+                  <button class="option-btn js-scoop1-btn" data-name="Yuzu Lemon Basil Sorbet">
+                    🍋 Yuzu Lemon Sorbet (Vegan)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 3: Scoop 2 -->
+              <div class="builder-step">
+                <div class="step-heading">
+                  <span class="step-num">3</span>
+                  <span>Pilih Scoop Kedua:</span>
+                </div>
+                <div class="options-pill-group">
+                  <button class="option-btn js-scoop2-btn selected" data-name="Tahitian Vanilla & Honeycomb">
+                    🍯 Tahitian Vanilla & Honeycomb
+                  </button>
+                  <button class="option-btn js-scoop2-btn" data-name="Lavender Earl Grey">
+                    🪻 Lavender Earl Grey
+                  </button>
+                  <button class="option-btn js-scoop2-btn" data-name="Matcha Stracciatella">
+                    🍵 Matcha Stracciatella
+                  </button>
+                  <button class="option-btn js-scoop2-btn" data-name="Alphonso Mango Silk">
+                    🥭 Mango Silk Sorbet
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 4: Toppings & Drizzles -->
+              <div class="builder-step">
+                <div class="step-heading">
+                  <span class="step-num">4</span>
+                  <span>Pilih Drizzle & Topping Spesial:</span>
+                </div>
+                <div class="options-pill-group">
+                  <button class="option-btn js-topping-btn selected" data-name="Warm Valrhona Fudge & Sprinkles" data-price="7000">
+                    🍫 Valrhona Hot Fudge & Sprinkles (+7rb)
+                  </button>
+                  <button class="option-btn js-topping-btn" data-name="Salted Honeycomb Toffee Bits" data-price="8000">
+                    🍯 Honeycomb Toffee Bits (+8rb)
+                  </button>
+                  <button class="option-btn js-topping-btn" data-name="Toasted Marshmallow Fluff" data-price="9000">
+                    🔥 Torched Marshmallow Fluff (+9rb)
+                  </button>
+                  <button class="option-btn js-topping-btn" data-name="Tanpa Topping Tambahan" data-price="0">
+                    ✨ Tanpa Topping (+0rb)
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Summary Card -->
+            <div class="builder-summary-card">
+              <h3 class="summary-heading">Ringkasan Kreasi Sundae</h3>
+
+              <div class="summary-item-row">
+                <span style="color: var(--color-text-muted);">Base Double Scoop:</span>
+                <span style="font-weight: 600;">Rp 42.000</span>
+              </div>
+
+              <div class="summary-item-row">
+                <span style="color: var(--color-text-muted);">Pilihan Wadah:</span>
+                <span style="font-weight: 600;" id="sumVessel">Handmade Waffle Cone</span>
+              </div>
+
+              <div class="summary-item-row">
+                <span style="color: var(--color-text-muted);">Kombinasi Scoop:</span>
+                <span style="font-weight: 600; text-align: right; max-width: 180px;" id="sumScoops">
+                  Wild Strawberry + Tahitian Vanilla
+                </span>
+              </div>
+
+              <div class="summary-item-row">
+                <span style="color: var(--color-text-muted);">Topping:</span>
+                <span style="font-weight: 600;" id="sumTopping">Warm Valrhona Fudge</span>
+              </div>
+
+              <div class="summary-total-row">
+                <span>Total Sundae:</span>
+                <span id="sumTotal">Rp 57.000</span>
+              </div>
+
+              <button class="btn-pill btn-maroon" id="addSundaeToCart" style="width: 100%; margin-top: 20px; padding: 12px;">
+                🍨 MASUKKAN KREASI KE KERANJANG
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ ACCORDION -->
+      <section style="background-color: var(--color-cream-light); padding: 70px 0; border-top: 2px solid var(--color-maroon);">
+        <div class="container" style="max-width: 800px;">
+          <div style="text-align: center; margin-bottom: 40px;">
+            <span class="tagline-caps">FREQUENTLY ASKED QUESTIONS</span>
+            <h2 style="font-size: 2.4rem; margin-top: 6px;">Pertanyaan Seputar Pemesanan</h2>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 18px 22px;">
+              <summary style="font-weight: 700; color: var(--color-maroon); cursor: pointer; font-size: 1.05rem;">
+                Bagaimana es krim dikirim agar tidak mencair di jalan?
+              </summary>
+              <p style="margin-top: 12px; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                Semua pesanan dikemas menggunakan Insulated Thermal Box khusus dengan dry ice food-grade bersuhu -78°C yang menjaga es krim tetap beku padat hingga 6 jam perjalanan sampai tiba di tanganmu.
+              </p>
+            </details>
+
+            <details style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 18px 22px;">
+              <summary style="font-weight: 700; color: var(--color-maroon); cursor: pointer; font-size: 1.05rem;">
+                Berapa lama es krim pint bisa disimpan di freezer rumah?
+              </summary>
+              <p style="margin-top: 12px; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                Karena es krim kami tidak mengandung bahan pengawet kimiawi, tekstur terbaik dinikmati dalam waktu 4 minggu sejak tanggal produksi pada suhu freezer stabil (-18°C).
+              </p>
+            </details>
+
+            <details style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 18px 22px;">
+              <summary style="font-weight: 700; color: var(--color-maroon); cursor: pointer; font-size: 1.05rem;">
+                Apakah ada pilihan untuk yang intoleransi laktosa atau vegetarian/vegan?
+              </summary>
+              <p style="margin-top: 12px; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                Tentu saja! Kami memiliki varian sorbet berbasis buah murni seperti Yuzu Lemon Basil dan Mango Passionfruit Silk yang 100% bebas susu sapi (dairy-free), tanpa telur, dan ramah vegan.
+              </p>
+            </details>
+
+            <details style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 18px 22px;">
+              <summary style="font-weight: 700; color: var(--color-maroon); cursor: pointer; font-size: 1.05rem;">
+                Bagaimana cara memesan katering gerobak vintage untuk pernikahan/acara?
+              </summary>
+              <p style="margin-top: 12px; font-size: 0.9rem; color: var(--color-text-muted); line-height: 1.6;">
+                Kamu bisa menggunakan kalkulator katering di halaman Beranda kami untuk mendapatkan estimasi instan, lalu menghubungi tim kami via WhatsApp untuk memeriksa ketersediaan slot tanggal dan sesi tasting rasa gratis.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo">nectar</span>
+            <p class="desc">
+              Gerobak es krim artisan yang berdedikasi menghadirkan kebahagiaan manis di setiap sudut kota dan momen perayaan istimewa.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Jelajahi</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="menu.html">Menu Rasa Lengkap</a></li>
+              <li><a href="index.html#schedule">Jadwal Gerobak</a></li>
+              <li><a href="index.html#catering">Paket Catering</a></li>
+              <li><a href="index.html#club">The Scoop Club</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Jam Operasional</h4>
+            <ul class="footer-links">
+              <li>Sel - Jum: 14:00 - 20:00</li>
+              <li>Sabtu - Minggu: 10:00 - 21:00</li>
+              <li>Senin: Dapur Produksi (Tutup)</li>
+              <li style="margin-top: 10px; color: var(--color-peach);">📍 Hubungi: +62 812-3456-7890</li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Media Sosial</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,247,236,0.8); margin-bottom: 14px;">
+              Ikuti Instagram & TikTok kami untuk kejutan rasa baru setiap Kamis!
+            </p>
+            <div style="display: flex; gap: 10px;">
+              <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">@nectaricecream</a>
+              <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">TikTok</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Nectar Artisan Creamery. All rights reserved.</div>
+          <div>Inspired by Vintage European Gelato Carts & Sweet Nostalgia</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL: CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="closeCheckoutModal" aria-label="Tutup">✕</button>
+      <span class="tagline-caps">KONFIRMASI PESANAN</span>
+      <h3 id="checkoutModalTitle" style="font-size: 1.8rem; margin: 8px 0 16px;">Pengiriman & Data Penerima</h3>
+
+      <div style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px;">
+        <h4 style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; color: var(--color-maroon);">Ringkasan Item:</h4>
+        <div id="checkoutOrderSummary"></div>
+        <div style="border-top: 1.5px dashed rgba(122,25,42,0.2); padding-top: 10px; margin-top: 10px; display: flex; justify-content: space-between; font-weight: 700; font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-maroon);">
+          <span>Total Pembayaran:</span>
+          <span id="checkoutFinalTotal">Rp 0</span>
+        </div>
+      </div>
+
+      <form id="checkoutForm">
+        <div class="calc-field">
+          <label for="custName">Nama Lengkap:</label>
+          <input type="text" id="custName" class="form-input-control" required placeholder="Contoh: Sarah Amanda">
+        </div>
+
+        <div class="calc-field">
+          <label for="custPhone">Nomor WhatsApp Aktif:</label>
+          <input type="tel" id="custPhone" class="form-input-control" required placeholder="Contoh: 08123456789">
+        </div>
+
+        <div class="calc-field">
+          <label for="custAddress">Alamat Lengkap Pengiriman (Kota / Daerah):</label>
+          <textarea id="custAddress" class="form-input-control" rows="2" required placeholder="Jl. Senopati No. 12, Kebayoran Baru, Jakarta Selatan"></textarea>
+        </div>
+
+        <div class="calc-field">
+          <label for="custPayment">Metode Pembayaran:</label>
+          <select id="custPayment" class="form-input-control">
+            <option value="QRIS Instan (GoPay, OVO, BCA, Dana)">QRIS Instan (GoPay, OVO, BCA, ShopeePay)</option>
+            <option value="Transfer Bank BCA">Transfer Bank BCA</option>
+            <option value="Transfer Bank Mandiri">Transfer Bank Mandiri</option>
+            <option value="COD / Bayar Saat Pengiriman Kurir">COD / Bayar Saat Terima</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label for="custNotes">Catatan Tambahan (Opsional):</label>
+          <input type="text" id="custNotes" class="form-input-control" placeholder="Contoh: Kirim jam 3 sore, sertakan kartu ucapan birthday">
+        </div>
+
+        <button type="submit" class="btn-pill btn-maroon" style="width: 100%; padding: 12px; font-size: 0.95rem;">
+          PESAN SEKARANG VIA WHATSAPP 🍨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitleMenu">
+    <div class="cart-drawer-header">
+      <h3 id="cartDrawerTitleMenu">Pesanan Manismu (<span class="cart-count">0</span>)</h3>
+      <button class="modal-close-btn" id="closeCartBtn" style="position: static;" aria-label="Tutup Keranjang">✕</button>
+    </div>
+
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">Rp 0</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 14px;">
+        *Pengiriman aman dengan dry ice box tahan 6 jam.
+      </p>
+      <button class="btn-pill btn-maroon" id="checkoutBtn" style="width: 100%; padding: 12px;">
+        LANJUT KE PEMBAYARAN 🍨
+      </button>
+    </div>
+  </div>
+  <div class="mobile-drawer-backdrop" id="cartBackdrop"></div>
+
+  <!-- Toast Notice Element -->
+  <div class="toast-notice" id="toastNotice"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

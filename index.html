@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nectar Creamery — The Artisan Ice Cream Cart of Your Dreams</title>
+  <meta name="description" content="Artisan hand-churned ice cream & gelato cart. Catering pernikahan, ulang tahun, pop-up mingguan, dan langganan pint bulanan.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍨</text></svg>">
+</head>
+<body class="bg-grid-pattern">
+
+  <!-- Side Ribbon Branding (Visible on large screens like editorial magazine) -->
+  <div class="side-brand-tag left">Artisan Hand-Churned Creamery</div>
+  <div class="side-brand-tag right">Website Design by Nectar Studio</div>
+
+  <div class="site-frame">
+    <!-- Top Announcement Ticker -->
+    <div class="top-ticker">
+      <span>🚚 JADWAL POP-UP MINGGU INI TELAH TERBIT! TEMUKAN GEROBAK KAMI DI KOTAMU ✨</span>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header class="header-nav">
+      <div class="nav-container">
+        <nav class="nav-left" aria-label="Main Navigation Left">
+          <a href="#schedule" class="nav-link js-open-location-modal">Temukan Gerobak</a>
+          <a href="#catering" class="nav-link js-open-catering-modal">Book Catering</a>
+        </nav>
+        <a href="index.html" class="brand-logo" aria-label="Nectar Home">nectar</a>
+        <nav class="nav-right" aria-label="Main Navigation Right">
+          <a href="menu.html" class="nav-link">Menu Rasa</a>
+          <a href="#club" class="nav-link">Scoop Club</a>
+          <button class="cart-btn js-open-cart" aria-label="Buka Keranjang">
+            <span>🛒</span>
+            <span>Pesanan</span>
+            <span class="cart-count">0</span>
+          </button>
+        </nav>
+
+        <!-- Mobile Nav Toggle Hamburger -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Buka Menu Navigasi">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Overlay -->
+    <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="mobile-nav-links">
+        <a href="index.html" class="mobile-nav-link">Beranda</a>
+        <a href="menu.html" class="mobile-nav-link">Menu & Toko Pint</a>
+        <a href="#schedule" class="mobile-nav-link js-open-location-modal">Temukan Gerobak</a>
+        <a href="#catering" class="mobile-nav-link js-open-catering-modal">Catering & Event</a>
+        <a href="#club" class="mobile-nav-link">The Scoop Club</a>
+      </div>
+      <div>
+        <button class="btn-pill btn-maroon js-open-cart" style="width: 100%; margin-bottom: 12px;">
+          🛒 Buka Keranjang (<span class="cart-count">0</span>)
+        </button>
+        <p style="font-size: 0.75rem; color: var(--color-text-muted); text-align: center;">
+          Hand-Churned with Love • Organic Dairy
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Left Column: Copy & CTAs -->
+            <div class="hero-content">
+              <span class="hero-badge">( ARTISAN HAND-CHURNED ICE CREAM & GELATO )</span>
+              <h1 class="hero-title">The Artisan Ice Cream Cart of Your Dreams</h1>
+              <p class="hero-desc">
+                Gerobak es krim vintage impianmu untuk pesta pernikahan, ulang tahun, katering korporat, pengiriman paket pint bulanan, dan pop-up manis setiap akhir pekan.
+              </p>
+
+              <div class="hero-cta-group">
+                <a href="#club" class="btn-pill btn-periwinkle">GABUNG SCOOP CLUB</a>
+                <a href="menu.html" class="btn-pill btn-maroon">LIHAT SEMUA RASA 🍦</a>
+
+                <!-- Doodled Curved Arrow pointing right to the cart visual -->
+                <div class="arrow-annotation" aria-hidden="true">
+                  <svg viewBox="0 0 100 50" fill="none" stroke="var(--color-maroon)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M 5,20 Q 50,-10 90,32" />
+                    <path d="M 80,32 L 90,32 L 88,22" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Vintage Ice Cream Cart Graphic & Floating Stickers -->
+            <div class="hero-visual">
+              <div class="cart-image-wrapper">
+                <!-- Handwritten Callout -->
+                <span class="handwritten-callout">catch me if you melt! 🍦</span>
+
+                <!-- Cute Floating Doodles & Stickers -->
+                <div class="sticker sticker-cherry-top" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" width="44" height="44">
+                    <path d="M22 25 C20 10, 30 5, 38 6 C32 15, 30 20, 36 28" fill="none" stroke="#2D6028" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="20" cy="38" r="14" fill="#D92842"/>
+                    <circle cx="16" cy="34" r="4" fill="#FF8D9E"/>
+                    <circle cx="42" cy="38" r="14" fill="#D92842"/>
+                    <circle cx="38" cy="34" r="4" fill="#FF8D9E"/>
+                  </svg>
+                </div>
+
+                <div class="sticker sticker-gummy" aria-hidden="true">
+                  <svg viewBox="0 0 40 50" width="32" height="40">
+                    <path d="M12 8 C12 4, 18 2, 20 2 C22 2, 28 4, 28 8 C32 10, 34 16, 32 24 C36 28, 36 38, 32 44 C28 48, 12 48, 8 44 C4 38, 4 28, 8 24 C6 16, 8 10, 12 8 Z" fill="#91D37E" stroke="#5EA64B" stroke-width="2"/>
+                    <circle cx="16" cy="14" r="2.5" fill="#2E691E"/>
+                    <circle cx="24" cy="14" r="2.5" fill="#2E691E"/>
+                  </svg>
+                </div>
+
+                <div class="sticker sticker-sparkle" aria-hidden="true">
+                  <svg viewBox="0 0 30 30" width="28" height="28" fill="#F8C644">
+                    <path d="M15 0 L18 11 L29 15 L18 19 L15 30 L12 19 L1 15 L12 11 Z"/>
+                  </svg>
+                </div>
+
+                <!-- Handcrafted Vintage Ice Cream Truck Visual -->
+                <div class="truck-illustration-container" style="background: radial-gradient(circle, #FFF 0%, rgba(255,247,236,0) 70%); border-radius: 30px; padding: 15px;">
+                  <!-- High fidelity Vintage Ice Cream Cart Image -->
+                  <img 
+                    src="asset/standicecream.png"                    
+                    alt="Vintage Nectar Artisan Ice Cream Cart" 
+                    class="cart-main-img" 
+                    style="border-radius: 24px; border: 2.5px solid var(--color-maroon); box-shadow: 0 16px 32px rgba(122, 25, 42, 0.2);"
+                  >
+                  <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 10px;">
+                    <span style="font-family: var(--font-handwriting); font-size: 1.5rem; color: var(--color-maroon);">Piaggio Ape Vintage Creamery</span>
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-maroon); letter-spacing: 0.1em; background: var(--color-peach); padding: 2px 10px; border-radius: var(--radius-pill); border: 1px solid var(--color-maroon);">★ FRESH DAILY</span>
+                  </div>
+                </div>
+
+                <!-- Bottom Floating Cherry Sticker -->
+                <div class="sticker sticker-cherry-bottom" aria-hidden="true">
+                  <svg viewBox="0 0 60 60" width="38" height="38">
+                    <path d="M22 25 C20 10, 30 5, 38 6 C32 15, 30 20, 36 28" fill="none" stroke="#2D6028" stroke-width="3" stroke-linecap="round"/>
+                    <circle cx="20" cy="38" r="14" fill="#D92842"/>
+                    <circle cx="42" cy="38" r="14" fill="#D92842"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: CALENDAR / WEEKLY POP-UP SCHEDULE (NOTEBOOK BINDER CUTOUT) -->
+      <section class="schedule-section" id="schedule">
+        <div class="container">
+          <!-- Notebook Sheet with Circular Punched Hole Binder Edge -->
+          <div class="notebook-sheet">
+            <!-- Punched Binder Holes Row (Like spiral notebook in reference!) -->
+            <div class="binder-holes-row" aria-hidden="true">
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+              <span class="binder-hole"></span>
+            </div>
+
+            <div class="notebook-inner">
+              <div class="schedule-header">
+                <p class="sub">LOKASI GEROBAK KELILING</p>
+                <h2 class="title">Jadwal Minggu Ini</h2>
+              </div>
+
+              <!-- 7 Days Grid -->
+              <div class="schedule-table-wrap">
+                <div class="schedule-grid">
+                  <!-- Sen (Mon) -->
+                  <div class="day-column">
+                    <div class="day-header">
+                      <span>SEN</span>
+                      <span>03</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">🍩</div>
+                      <div class="day-location">Studio Rest & Prep</div>
+                      <div class="day-time">Dapur Produksi</div>
+                      <span class="day-status-pill status-rest">Tutup</span>
+                    </div>
+                  </div>
+
+                  <!-- Sel (Tue) -->
+                  <div class="day-column">
+                    <div class="day-header">
+                      <span>SEL</span>
+                      <span>04</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">🍨</div>
+                      <div class="day-location">Senopati Arcade</div>
+                      <div class="day-time">14:00 - 18:00</div>
+                      <span class="day-status-pill status-scooping">Scooping</span>
+                    </div>
+                  </div>
+
+                  <!-- Rab (Wed) - Active Circle Highlight like reference! -->
+                  <div class="day-column active-today">
+                    <svg class="hand-drawn-marker-circle" viewBox="0 0 140 180" fill="none" stroke="#7C8CE8" stroke-width="2.8" stroke-linecap="round" aria-hidden="true">
+                      <path d="M 70, 18 C 22, 22, 12, 78, 18, 128 C 25, 168, 115, 172, 126, 124 C 134, 76, 118, 26, 68, 16 C 36, 12, 18, 58, 26, 108" />
+                    </svg>
+                    <div class="day-header">
+                      <span style="color: #E54868;">RAB</span>
+                      <span style="color: #E54868;">05 ★ HARI INI</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">🍓</div>
+                      <div class="day-location">Menteng Central Park</div>
+                      <div class="day-time">13:00 - 19:00</div>
+                      <span class="day-status-pill status-scooping" style="background:#E54868; color:#fff;">Hari Ini!</span>
+                    </div>
+                  </div>
+
+                  <!-- Kam (Thu) -->
+                  <div class="day-column">
+                    <div class="day-header">
+                      <span>KAM</span>
+                      <span>06</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">🍫</div>
+                      <div class="day-location">PIK Urban Farm</div>
+                      <div class="day-time">15:00 - 21:00</div>
+                      <span class="day-status-pill status-scooping">Scooping</span>
+                    </div>
+                  </div>
+
+                  <!-- Jum (Fri) -->
+                  <div class="day-column">
+                    <div class="day-header">
+                      <span>JUM</span>
+                      <span>07</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">🍦</div>
+                      <div class="day-location">SCBD Pacific Lawn</div>
+                      <div class="day-time">14:00 - 20:00</div>
+                      <span class="day-status-pill status-scooping">Scooping</span>
+                    </div>
+                  </div>
+
+                  <!-- Sab (Sat) -->
+                  <div class="day-column">
+                    <div class="day-header">
+                      <span>SAB</span>
+                      <span>08</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">💒</div>
+                      <div class="day-location">Villa Botanica (Private)</div>
+                      <div class="day-time">11:00 - 17:00</div>
+                      <span class="day-status-pill status-private">Private Wedding</span>
+                    </div>
+                  </div>
+
+                  <!-- Min (Sun) -->
+                  <div class="day-column">
+                    <div class="day-header">
+                      <span>MIN</span>
+                      <span>09</span>
+                    </div>
+                    <div class="day-body">
+                      <div class="day-icon">🍧</div>
+                      <div class="day-location">Car Free Day Sudirman</div>
+                      <div class="day-time">06:30 - 11:30</div>
+                      <span class="day-status-pill status-scooping">Pagi Manis</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Find Us Today Action -->
+              <button class="btn-pill btn-maroon js-open-location-modal">
+                📍 CEK TITIK LOKASI HARI INI
+              </button>
+            </div>
+          </div>
+
+          <!-- Newsletter Ticker Banner (Pill shaped bar under notebook) -->
+          <div class="schedule-ticker-bar">
+            <span class="ticker-text">PSST! DAPATKAN JADWAL GEROBAK DI INBOX SETIAP MINGGU!</span>
+            <form class="ticker-form js-newsletter-form">
+              <input type="email" placeholder="Ketik alamat emailmu..." required class="ticker-input">
+              <button type="submit" class="ticker-btn">DAFTAR</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: CATERING & PRIVATE EVENTS (VERTICAL AWNING STRIPES & POLAROID) -->
+      <section class="catering-section" id="catering">
+        <div class="container">
+          <div class="catering-grid">
+            <!-- Left Side: Copy & Pricing Cloud Badges -->
+            <div class="catering-content">
+              <span class="tagline-caps">WEDDINGS • BIRTHDAYS • CORPORATE • POP-UPS</span>
+              <h2 class="catering-title">Acara Spesialmu Membutuhkan Ice Cream!</h2>
+              <p class="catering-desc">
+                Catering es cream artisan dengan gerobak vintage estetis. Dilengkapi pramuesaji profesional, cone wafel buatan tangan, sendok biodegradable, dan pilihan rasa khusus sesuai tema acaramu.
+              </p>
+
+              <!-- 3 Scalloped Price Cloud Badges (Matching reference!) -->
+              <div class="price-badges-group">
+                <!-- Badge 1: Cart Fee -->
+                <div class="price-badge-item badge-peach">
+                  <span class="badge-amount">3.5 Jt</span>
+                  <span class="badge-label">CART FEE<br>(2 JAM)</span>
+                </div>
+
+                <!-- Badge 2: Per Guest -->
+                <div class="price-badge-item badge-maroon">
+                  <span class="badge-amount">35 Rb</span>
+                  <span class="badge-label">PER<br>TAMU</span>
+                </div>
+
+                <!-- Badge 3: Additional Hour -->
+                <div class="price-badge-item badge-pink">
+                  <span class="badge-amount">850 Rb</span>
+                  <span class="badge-label">PER JAM<br>TAMBAHAN</span>
+                </div>
+              </div>
+
+              <!-- Modal Trigger for Event Calculator -->
+              <div>
+                <button class="btn-pill btn-maroon js-open-catering-modal">
+                  ✨ HITUNG SIMULASI CATERING
+                </button>
+              </div>
+            </div>
+
+            <!-- Right Side: Polaroid Photo with Washi Tape & Stamp -->
+            <div class="polaroid-frame-wrapper">
+              <div class="polaroid-card">
+                <!-- Washi Tape Effect -->
+                <div class="washi-tape" aria-hidden="true"></div>
+                <div class="washi-tape-bottom" aria-hidden="true"></div>
+
+                <!-- Stamp Badge -->
+                <div class="stamp-badge">
+                  <span>designed<br>to delight!</span>
+                </div>
+
+                <!-- Photo -->
+                <img 
+                  src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&auto=format&fit=crop&q=80" 
+                  alt="Nectar Ice Cream Cart at Garden Wedding" 
+                  class="polaroid-img"
+                >
+
+                <p class="polaroid-caption">Handcrafted for your sweetest days ♡</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CRENELLATED AESTHETIC DIVIDER (From Reference!) -->
+      <div class="crenellated-divider" aria-hidden="true"></div>
+
+      <!-- SECTION 4: THE SCOOP CLUB / SUBSCRIPTION (PERIWINKLE BACKGROUND & SCALLOPED CARD) -->
+      <section class="scoop-club-section" id="club">
+        <!-- Floating Stickers in Scoop Club section matching reference -->
+        <div class="sticker" style="top: 35px; left: 8%; width: 50px; --rot: -12deg;" aria-hidden="true">
+          <svg viewBox="0 0 60 30" width="50" height="25">
+            <path d="M 5,15 Q 25,2 45,15 Q 55,20 58,10 Q 56,20 58,25 Q 52,18 45,15 Q 25,28 5,15 Z" fill="#E84A5F" stroke="#B82E40" stroke-width="2"/>
+            <circle cx="15" cy="14" r="2" fill="#FFF"/>
+          </svg>
+        </div>
+
+        <div class="sticker" style="bottom: 40px; right: 8%; width: 42px; --rot: 18deg;" aria-hidden="true">
+          <svg viewBox="0 0 60 60" width="42" height="42">
+            <path d="M22 25 C20 10, 30 5, 38 6 C32 15, 30 20, 36 28" fill="none" stroke="#2D6028" stroke-width="3" stroke-linecap="round"/>
+            <circle cx="20" cy="38" r="14" fill="#D92842"/>
+            <circle cx="16" cy="34" r="4" fill="#FF8D9E"/>
+            <circle cx="42" cy="38" r="14" fill="#D92842"/>
+            <circle cx="38" cy="34" r="4" fill="#FF8D9E"/>
+          </svg>
+        </div>
+
+        <div class="sticker" style="bottom: 30px; left: 6%; width: 45px; --rot: -8deg;" aria-hidden="true">
+          <svg viewBox="0 0 50 65" width="40" height="52">
+            <rect x="8" y="20" width="34" height="40" rx="4" fill="#FFF" stroke="var(--color-maroon)" stroke-width="2"/>
+            <line x1="16" y1="20" x2="16" y2="60" stroke="#EE6A86" stroke-width="3"/>
+            <line x1="26" y1="20" x2="26" y2="60" stroke="#EE6A86" stroke-width="3"/>
+            <line x1="34" y1="20" x2="34" y2="60" stroke="#EE6A86" stroke-width="3"/>
+            <ellipse cx="25" cy="20" rx="18" ry="8" fill="#FCE8EB" stroke="var(--color-maroon)" stroke-width="2"/>
+          </svg>
+        </div>
+
+        <div class="container">
+          <div class="scalloped-container">
+            <!-- Heart Sticker on Card -->
+            <div class="sticker-heart" aria-hidden="true">
+              <span>Best of All<br>Sweetest<br>Perks ♡</span>
+            </div>
+
+            <!-- Mini Logo Pill on top of card -->
+            <div style="display: inline-block; background: var(--color-peach); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-pill); padding: 3px 14px; margin-bottom: 12px; font-family: var(--font-serif); font-weight: 800; font-size: 0.95rem; color: var(--color-maroon);">
+              nectar
+            </div>
+            <br>
+
+            <span class="scallop-stamp-pill">LANGGANAN PINT BULANAN</span>
+            <h2 class="club-title">Join the Nectar Scoop Club</h2>
+            <div class="club-price">Rp 249.000 <span style="font-size: 1.1rem; font-family: var(--font-sans); font-weight: 500; color: var(--color-text-muted);">/ bulan</span></div>
+
+            <p class="club-desc">
+              Nikmati kiriman 4 pint gelato artisan kurasi chef langsung ke depan pintumu setiap bulan. Dilengkapi packaging khusus thermal ice box yang dijamin beku hingga 6 jam!
+            </p>
+
+            <!-- Perks Grid -->
+            <div class="club-perks-grid">
+              <div class="club-perk-item">
+                <span class="icon">📦</span>
+                <h4 class="heading">4 Pint Kurasi Eksklusif</h4>
+                <p class="text">Kombinasi 2 rasa klasik favorit dan 2 rasa musiman rahasia dari test-kitchen kami.</p>
+              </div>
+
+              <div class="club-perk-item">
+                <span class="icon">🧪</span>
+                <h4 class="heading">Akses Rasa Eksperimental</h4>
+                <p class="text">Jadilah yang pertama mencicipi rasa rahasia sebelum dirilis ke gerobak umum.</p>
+              </div>
+
+              <div class="club-perk-item">
+                <span class="icon">✨</span>
+                <h4 class="heading">Gratis Topping di Gerobak</h4>
+                <p class="text">Tunjukkan kartu member digitalmu di gerobak mana pun untuk upgrade waffle cone gratis.</p>
+              </div>
+            </div>
+
+            <div>
+              <button class="btn-pill btn-maroon" onclick="addToCart({id: 'club-sub-01', name: 'Nectar Scoop Club Membership', variant: 'Langganan 4 Pint/Bulan', price: 249000, img: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=150&auto=format&fit=crop&q=80'})">
+                DAFTAR ANGGOTA SEKARANG
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CUSTOMER REVIEWS / LOVE NOTES -->
+      <section style="padding: 70px 0; background-color: var(--color-cream); border-top: 2px dashed rgba(122,25,42,0.2);">
+        <div class="container" style="text-align: center;">
+          <span class="tagline-caps">LOVE NOTES FROM OUR GUESTS</span>
+          <h2 style="font-size: 2.5rem; margin-top: 8px; margin-bottom: 40px;">Apa Kata Mereka?</h2>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; text-align: left;">
+            <div style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);">
+              <div style="color: #F8B84E; margin-bottom: 12px; font-size: 1.1rem;">★★★★★</div>
+              <p style="font-style: italic; color: var(--color-dark); margin-bottom: 16px; font-size: 0.92rem;">
+                "Gerobak Nectar jadi highlight terbaik di pernikahan kami! Tamu-tamu antre foto dan rasa Wild Strawberry Shortcake-nya benar-benar tak terlupakan."
+              </p>
+              <div style="font-weight: 700; font-size: 0.85rem; color: var(--color-maroon);">— Clarissa & Arga, Pengantin di Plataran</div>
+            </div>
+
+            <div style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);">
+              <div style="color: #F8B84E; margin-bottom: 12px; font-size: 1.1rem;">★★★★★</div>
+              <p style="font-style: italic; color: var(--color-dark); margin-bottom: 16px; font-size: 0.92rem;">
+                "Langganan Scoop Club bulanan adalah self-reward terbaik saya. Rasanya autentik, creamy tapi gak enek, dan packing es keringnya sangat aman."
+              </p>
+              <div style="font-weight: 700; font-size: 0.85rem; color: var(--color-maroon);">— Felicia Hartono, Member sejak 2023</div>
+            </div>
+
+            <div style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 24px; box-shadow: var(--shadow-sm);">
+              <div style="color: #F8B84E; margin-bottom: 12px; font-size: 1.1rem;">★★★★★</div>
+              <p style="font-style: italic; color: var(--color-dark); margin-bottom: 16px; font-size: 0.92rem;">
+                "Pistachio Brioche Crunch adalah es krim terbaik di Jakarta. Setiap kali gerobak mereka pop-up di SCBD, saya pasti menyempatkan mampir!"
+              </p>
+              <div style="font-weight: 700; font-size: 0.85rem; color: var(--color-maroon);">— Dimas Raditya, SCBD Office Worker</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <span class="logo">nectar</span>
+            <p class="desc">
+              Gerobak es krim artisan yang berdedikasi menghadirkan kebahagiaan manis di setiap sudut kota dan momen perayaan istimewa.
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Jelajahi</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Beranda</a></li>
+              <li><a href="menu.html">Menu Rasa Lengkap</a></li>
+              <li><a href="#schedule" class="js-open-location-modal">Jadwal Gerobak</a></li>
+              <li><a href="#catering" class="js-open-catering-modal">Paket Catering</a></li>
+              <li><a href="#club">The Scoop Club</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Jam Operasional</h4>
+            <ul class="footer-links">
+              <li>Sel - Jum: 14:00 - 20:00</li>
+              <li>Sabtu - Minggu: 10:00 - 21:00</li>
+              <li>Senin: Dapur Produksi (Tutup)</li>
+              <li style="margin-top: 10px; color: var(--color-peach);">📍 Hubungi: +62 812-3456-7890</li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Media Sosial</h4>
+            <p style="font-size: 0.85rem; color: rgba(255,247,236,0.8); margin-bottom: 14px;">
+              Ikuti Instagram & TikTok kami untuk kejutan rasa baru setiap Kamis!
+            </p>
+            <div style="display: flex; gap: 10px;">
+              <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">@nectaricecream</a>
+              <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">TikTok</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>© 2026 Nectar Artisan Creamery. All rights reserved.</div>
+          <div>Inspired by Vintage European Gelato Carts & Sweet Nostalgia</div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- MODAL 1: CATERING PRICE ESTIMATOR -->
+  <div class="modal-overlay" id="cateringModal" role="dialog" aria-modal="true" aria-labelledby="cateringModalTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="closeCateringModal" aria-label="Tutup">✕</button>
+      <span class="tagline-caps">SIMULASI BIAYA CATERING</span>
+      <h3 id="cateringModalTitle" style="font-size: 1.8rem; margin: 8px 0 20px;">Rencanakan Gerobak di Event-mu</h3>
+
+      <div class="calc-field">
+        <label for="calcEventType">Jenis Acara:</label>
+        <select id="calcEventType" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--color-maroon); font-family: var(--font-sans); background: var(--color-white); font-weight: 600;">
+          <option>Pernikahan / Wedding</option>
+          <option>Ulang Tahun / Birthday Party</option>
+          <option>Corporate Gathering / Kantor</option>
+          <option>Pop-Up Brand Launch / Pameran</option>
+          <option>Private Family Dinner</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label for="calcGuests">
+          Estimasi Jumlah Tamu:
+          <span class="range-val-badge" id="valGuests">80 Orang</span>
+        </label>
+        <input type="range" id="calcGuests" min="30" max="400" step="10" value="80" class="range-slider">
+      </div>
+
+      <div class="calc-field">
+        <label for="calcHours">
+          Durasi Pelayanan di Lokasi:
+          <span class="range-val-badge" id="valHours">2 Jam</span>
+        </label>
+        <input type="range" id="calcHours" min="2" max="6" step="1" value="2" class="range-slider">
+      </div>
+
+      <div class="calc-field">
+        <label for="calcDate">Perkiraan Tanggal Acara:</label>
+        <input type="date" id="calcDate" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--color-maroon); font-family: var(--font-sans); background: var(--color-white);">
+      </div>
+
+      <!-- Live Calculated Result Box -->
+      <div class="calc-result-box">
+        <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--color-maroon); text-transform: uppercase;">
+          Estimasi Total Investasi Acara
+        </div>
+        <div class="num" id="calcTotalEstimate">Rp 6.300.000</div>
+        <div style="font-size: 0.75rem; color: var(--color-text-muted); margin-top: 4px;">
+          *Termasuk sewa gerobak vintage, 2 pramuesaji berseragam, waffle cone buatan tangan, & cup biodegradable.
+        </div>
+      </div>
+
+      <button class="btn-pill btn-maroon" id="sendBookingInquiry" style="width: 100%; padding: 12px;">
+        KIRIM PERTANYAAN VIA WHATSAPP 💬
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL 2: "FIND US TODAY" LOCATION MODAL -->
+  <div class="modal-overlay" id="locationModal" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="closeLocationModal" aria-label="Tutup">✕</button>
+      <span class="tagline-caps">LOKASI AKTIF HARI INI</span>
+      <h3 id="locationModalTitle" style="font-size: 1.8rem; margin: 8px 0 16px;">Menteng Central Park Pop-Up</h3>
+
+      <div style="background: var(--color-white); border-radius: var(--radius-md); padding: 16px; border: 1.5px solid var(--color-maroon); margin-bottom: 20px;">
+        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+          <span style="font-size: 1.5rem;">📍</span>
+          <div>
+            <div style="font-weight: 700; color: var(--color-maroon);">Depan Air Mancur Taman Menteng</div>
+            <div style="font-size: 0.8rem; color: var(--color-text-muted);">Jl. HOS. Cokroaminoto, Menteng, Jakarta Pusat</div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 0.82rem; border-top: 1px dashed rgba(122,25,42,0.2); padding-top: 10px;">
+          <span>⏰ <strong>Jam:</strong> 13:00 - 19:00 WIB</span>
+          <span style="color: #155724; font-weight: 700;">● SEDANG BUKA SEKARANG</span>
+        </div>
+      </div>
+
+      <div style="margin-bottom: 24px;">
+        <h4 style="font-size: 0.9rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em;">Menu On-Wheels Hari Ini:</h4>
+        <ul style="font-size: 0.85rem; color: var(--color-text-muted); padding-left: 20px; line-height: 1.6;">
+          <li>🍓 Wild Strawberry Shortcake (Best Seller)</li>
+          <li>🌰 Roasted Sicilian Pistachio Brioche</li>
+          <li>🍯 Tahitian Vanilla Bean & Burnt Honeycomb</li>
+          <li>🍫 72% Dark Chocolate Fudge Swirl</li>
+          <li>🍋 Yuzu Basil Sorbet (Vegan)</li>
+        </ul>
+      </div>
+
+      <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn-pill btn-maroon" style="width: 100%; text-align: center;">
+        BUKA PETUNJUK ARAH GOOGLE MAPS 🗺️
+      </a>
+    </div>
+  </div>
+
+  <!-- MODAL 3: CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutModalTitle">
+    <div class="modal-window">
+      <button class="modal-close-btn" id="closeCheckoutModal" aria-label="Tutup">✕</button>
+      <span class="tagline-caps">KONFIRMASI PESANAN</span>
+      <h3 id="checkoutModalTitle" style="font-size: 1.8rem; margin: 8px 0 16px;">Pengiriman & Data Penerima</h3>
+
+      <div style="background: var(--color-white); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-md); padding: 16px; margin-bottom: 20px;">
+        <h4 style="font-size: 0.85rem; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 10px; color: var(--color-maroon);">Ringkasan Item:</h4>
+        <div id="checkoutOrderSummary"></div>
+        <div style="border-top: 1.5px dashed rgba(122,25,42,0.2); padding-top: 10px; margin-top: 10px; display: flex; justify-content: space-between; font-weight: 700; font-family: var(--font-serif); font-size: 1.15rem; color: var(--color-maroon);">
+          <span>Total Pembayaran:</span>
+          <span id="checkoutFinalTotal">Rp 0</span>
+        </div>
+      </div>
+
+      <form id="checkoutForm">
+        <div class="calc-field">
+          <label for="custName">Nama Lengkap:</label>
+          <input type="text" id="custName" class="form-input-control" required placeholder="Contoh: Sarah Amanda">
+        </div>
+
+        <div class="calc-field">
+          <label for="custPhone">Nomor WhatsApp Aktif:</label>
+          <input type="tel" id="custPhone" class="form-input-control" required placeholder="Contoh: 08123456789">
+        </div>
+
+        <div class="calc-field">
+          <label for="custAddress">Alamat Lengkap Pengiriman (Kota / Daerah):</label>
+          <textarea id="custAddress" class="form-input-control" rows="2" required placeholder="Jl. Senopati No. 12, Kebayoran Baru, Jakarta Selatan"></textarea>
+        </div>
+
+        <div class="calc-field">
+          <label for="custPayment">Metode Pembayaran:</label>
+          <select id="custPayment" class="form-input-control">
+            <option value="QRIS Instan (GoPay, OVO, BCA, Dana)">QRIS Instan (GoPay, OVO, BCA, ShopeePay)</option>
+            <option value="Transfer Bank BCA">Transfer Bank BCA</option>
+            <option value="Transfer Bank Mandiri">Transfer Bank Mandiri</option>
+            <option value="COD / Bayar Saat Pengiriman Kurir">COD / Bayar Saat Terima</option>
+          </select>
+        </div>
+
+        <div class="calc-field">
+          <label for="custNotes">Catatan Tambahan (Opsional):</label>
+          <input type="text" id="custNotes" class="form-input-control" placeholder="Contoh: Kirim jam 3 sore, sertakan kartu ucapan birthday">
+        </div>
+
+        <button type="submit" class="btn-pill btn-maroon" style="width: 100%; padding: 12px; font-size: 0.95rem;">
+          PESAN SEKARANG VIA WHATSAPP 🍨
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- SLIDE-OVER CART DRAWER -->
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle">
+    <div class="cart-drawer-header">
+      <h3 id="cartDrawerTitle">Pesanan Manismu (<span class="cart-count">0</span>)</h3>
+      <button class="modal-close-btn" id="closeCartBtn" style="position: static;" aria-label="Tutup Keranjang">✕</button>
+    </div>
+
+    <div class="cart-drawer-items" id="cartDrawerItems">
+      <!-- Injected by JavaScript -->
+    </div>
+
+    <div class="cart-drawer-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal:</span>
+        <span id="cartSubtotal">Rp 0</span>
+      </div>
+      <p style="font-size: 0.75rem; color: var(--color-text-muted); margin-bottom: 14px;">
+        *Pengiriman aman dengan dry ice box tahan 6 jam.
+      </p>
+      <button class="btn-pill btn-maroon" id="checkoutBtn" style="width: 100%; padding: 12px;">
+        LANJUT KE PEMBAYARAN 🍨
+      </button>
+    </div>
+  </div>
+  <div class="mobile-drawer-backdrop" id="cartBackdrop"></div>
+
+  <!-- Toast Notice Element -->
+  <div class="toast-notice" id="toastNotice"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
