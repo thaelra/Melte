@@ -54,7 +54,7 @@ function initMobileNav() {
 let cart = [];
 
 function initCart() {
-  const savedCart = localStorage.getItem('nectar_cart');
+  const savedCart = localStorage.getItem('melte_cart') || localStorage.getItem('nectar_cart');
   if (savedCart) {
     try {
       cart = JSON.parse(savedCart);
@@ -163,7 +163,7 @@ function processOrder() {
     itemsListText += `${idx + 1}. ${item.name} [${item.variant}] x${item.qty} = ${formatRupiah(itemTotal)}\n`;
   });
 
-  const message = `🍨 *PESANAN BARU NECTAR CREAMERY*\n` +
+  const message = `🍨 *PESANAN BARU MELTÉ CREAMERY*\n` +
     `-----------------------------------------\n` +
     `👤 *Nama:* ${name}\n` +
     `📱 *WhatsApp:* ${phone}\n` +
@@ -244,7 +244,7 @@ function closeCartDrawer() {
 }
 
 function saveCart() {
-  localStorage.setItem('nectar_cart', JSON.stringify(cart));
+  localStorage.setItem('melte_cart', JSON.stringify(cart));
 }
 
 function addToCart(item) {
@@ -434,7 +434,7 @@ function initEventEstimator() {
       const eventType = document.getElementById('calcEventType') ? document.getElementById('calcEventType').value : 'Pernikahan';
       const eventDate = document.getElementById('calcDate') ? document.getElementById('calcDate').value : 'Segera';
 
-      const waMsg = `Halo Nectar Ice Cream! Saya ingin memesan Ice Cream Cart untuk acara ${eventType} (${guests} tamu, ${hours} jam). Tanggal acara: ${eventDate}. Mohon info ketersediaan slotnya. Terima kasih!`;
+      const waMsg = `Halo Melté Ice Cream! Saya ingin memesan Ice Cream Cart untuk acara ${eventType} (${guests} tamu, ${hours} jam). Tanggal acara: ${eventDate}. Mohon info ketersediaan slotnya. Terima kasih!`;
       const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waMsg)}`;
       window.open(waUrl, '_blank');
     });

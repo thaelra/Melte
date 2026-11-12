@@ -85,28 +85,6 @@ body {
   }
 }
 
-/* Side Branding Ribbons (Anchored to right maroon border like reference) */
-.side-brand-tag {
-  display: none;
-}
-
-@media (min-width: 1025px) {
-  .side-brand-tag.right {
-    display: block;
-    position: fixed;
-    right: 4px;
-    top: 50%;
-    transform: translateY(-50%) rotate(90deg);
-    color: rgba(255, 247, 236, 0.75);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    pointer-events: none;
-    z-index: 1000;
-  }
-}
-
 /* Common Grid Background (Vintage Graph Paper Pattern) */
 .bg-grid-pattern {
   background-color: var(--color-cream);

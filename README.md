@@ -1,4 +1,4 @@
-# 🍨 Nectar Artisan Ice Cream & Creamery — Website Frontend
+# 🍨 Melté Artisan Ice Cream & Creamery — Website Frontend
 
 Website frontend 2 halaman (*Page 1: Beranda / Cart & Event*, *Page 2: Menu Rasa & Toko Pint*) dengan estetika **retro-editorial whimsical boutique** terinspirasi dari referensi gerobak candy/gelato vintage Eropa.
 
