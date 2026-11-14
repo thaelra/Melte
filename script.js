@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initEventEstimator();
   initLocationModal();
   initMenuFilters();
-  initSundaeBuilder();
   initNewsletter();
 });
 
@@ -501,89 +500,6 @@ function initMenuFilters() {
       });
     });
   });
-}
-
-/* ==========================================================================
-   7. INTERACTIVE CUSTOM SUNDAE BUILDER STUDIO
-   ========================================================================== */
-function initSundaeBuilder() {
-  const builderEl = document.getElementById('sundaeStudio');
-  if (!builderEl) return;
-
-  let sundae = {
-    vessel: 'Handmade Waffle Cone',
-    vesselPrice: 8000,
-    scoop1: 'Wild Strawberry Shortcake',
-    scoop2: 'Tahitian Vanilla & Honeycomb',
-    topping: 'Warm Valrhona Fudge & Sprinkles',
-    toppingPrice: 7000,
-    basePrice: 42000
-  };
-
-  const vesselBtns = document.querySelectorAll('.js-vessel-btn');
-  const scoop1Btns = document.querySelectorAll('.js-scoop1-btn');
-  const scoop2Btns = document.querySelectorAll('.js-scoop2-btn');
-  const toppingBtns = document.querySelectorAll('.js-topping-btn');
-
-  function updateSummary() {
-    const vesselEl = document.getElementById('sumVessel');
-    const scoopsEl = document.getElementById('sumScoops');
-    const toppingEl = document.getElementById('sumTopping');
-    const totalEl = document.getElementById('sumTotal');
-
-    if (vesselEl) vesselEl.textContent = sundae.vessel;
-    if (scoopsEl) scoopsEl.textContent = `${sundae.scoop1} + ${sundae.scoop2}`;
-    if (toppingEl) toppingEl.textContent = sundae.topping;
-
-    const total = sundae.basePrice + sundae.vesselPrice + sundae.toppingPrice;
-    if (totalEl) totalEl.textContent = formatRupiah(total);
-  }
-
-  function handleSelection(btns, callback) {
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btns.forEach(b => b.classList.remove('selected'));
-        btn.classList.add('selected');
-        callback(btn);
-        updateSummary();
-      });
-    });
-  }
-
-  handleSelection(vesselBtns, (btn) => {
-    sundae.vessel = btn.getAttribute('data-name');
-    sundae.vesselPrice = parseInt(btn.getAttribute('data-price') || '0', 10);
-  });
-
-  handleSelection(scoop1Btns, (btn) => {
-    sundae.scoop1 = btn.getAttribute('data-name');
-  });
-
-  handleSelection(scoop2Btns, (btn) => {
-    sundae.scoop2 = btn.getAttribute('data-name');
-  });
-
-  handleSelection(toppingBtns, (btn) => {
-    sundae.topping = btn.getAttribute('data-name');
-    sundae.toppingPrice = parseInt(btn.getAttribute('data-price') || '0', 10);
-  });
-
-  const addSundaeBtn = document.getElementById('addSundaeToCart');
-  if (addSundaeBtn) {
-    addSundaeBtn.addEventListener('click', () => {
-      const total = sundae.basePrice + sundae.vesselPrice + sundae.toppingPrice;
-      addToCart({
-        id: 'custom-sundae-' + Date.now(),
-        name: `Custom Sundae Creation`,
-        variant: `${sundae.vessel} (${sundae.scoop1} & ${sundae.scoop2})`,
-        price: total,
-        img: 'https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=150&auto=format&fit=crop&q=80'
-      });
-      openCartDrawer();
-    });
-  }
-
-  updateSummary();
 }
 
 /* ==========================================================================

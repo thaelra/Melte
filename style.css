@@ -578,12 +578,12 @@ button {
 
 .handwritten-callout {
   position: absolute;
-  top: 30px;
-  right: -20px;
+  top: -25px;
+  right: 200px;
   font-family: var(--font-handwriting);
   font-size: 2.2rem;
   color: var(--color-maroon);
-  transform: rotate(8deg);
+  transform: rotate(1deg);
   white-space: nowrap;
   pointer-events: none;
 }
@@ -863,7 +863,6 @@ button {
   position: relative;
   padding: 85px 0 100px;
   background-color: #FFF5F7;
-  /* Retro Pink & Cream Awning Stripes */
   background-image: repeating-linear-gradient(
     90deg,
     #FFF8F9 0px,
@@ -1103,21 +1102,6 @@ button {
   border: 2.5px solid var(--color-maroon);
   text-align: center;
 }
-
-/* Decorative scalloped cloud border ripple simulation */
-.scalloped-container::before {
-  content: '';
-  position: absolute;
-  top: -8px;
-  left: 20px;
-  right: 20px;
-  height: 8px;
-  background-image: radial-gradient(circle at 10px 8px, transparent 8px, var(--color-maroon) 9px);
-  background-size: 20px 8px;
-  pointer-events: none;
-}
-
-/* Decorative Wavy Borders via SVG / CSS */
 .scallop-stamp-pill {
   display: inline-block;
   background-color: var(--color-periwinkle-light);
@@ -1154,7 +1138,6 @@ button {
   line-height: 1.6;
 }
 
-/* Subscription Perks List */
 .club-perks-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1379,123 +1362,6 @@ button {
   font-size: 0.75rem;
   color: var(--color-text-muted);
   display: block;
-}
-
-/* ==========================================================================
-   INTERACTIVE SUNDAE / SCOOP BUILDER STUDIO
-   ========================================================================== */
-.sundae-builder-section {
-  background-color: var(--color-pink-soft);
-  border: 2px solid var(--color-maroon);
-  border-radius: var(--radius-lg);
-  padding: 45px 35px;
-  margin-bottom: 80px;
-  box-shadow: 0 10px 25px rgba(122, 25, 42, 0.08);
-}
-
-.builder-title {
-  text-align: center;
-  font-size: 2.4rem;
-  margin-bottom: 10px;
-}
-
-.builder-subtitle {
-  text-align: center;
-  color: var(--color-text-muted);
-  margin-bottom: 35px;
-  font-size: 0.95rem;
-}
-
-.builder-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 36px;
-  align-items: start;
-}
-
-.builder-step {
-  margin-bottom: 24px;
-}
-
-.step-heading {
-  font-size: 0.95rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-maroon);
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.step-num {
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: var(--color-maroon);
-  color: var(--color-cream);
-  font-size: 0.72rem;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.options-pill-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.option-btn {
-  padding: 8px 14px;
-  border-radius: var(--radius-pill);
-  background: var(--color-white);
-  border: 1.5px solid var(--color-maroon);
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--color-dark);
-}
-
-.option-btn.selected {
-  background-color: var(--color-maroon);
-  color: var(--color-cream);
-}
-
-.builder-summary-card {
-  background-color: var(--color-white);
-  border: 1.5px solid var(--color-maroon);
-  border-radius: var(--radius-md);
-  padding: 24px;
-  box-shadow: var(--shadow-md);
-}
-
-.summary-heading {
-  font-size: 1.25rem;
-  border-bottom: 1px dashed rgba(122, 25, 42, 0.25);
-  padding-bottom: 12px;
-  margin-bottom: 16px;
-}
-
-.summary-item-row {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.88rem;
-  margin-bottom: 8px;
-  color: var(--color-dark);
-}
-
-.summary-total-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-top: 1.5px solid var(--color-maroon);
-  padding-top: 14px;
-  margin-top: 16px;
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--color-maroon);
 }
 
 /* ==========================================================================
@@ -1890,9 +1756,6 @@ button {
   }
   .hero-visual {
     order: -1;
-  }
-  .builder-layout {
-    grid-template-columns: 1fr;
   }
   .footer-grid {
     grid-template-columns: 1fr 1fr;

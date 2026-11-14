@@ -4,14 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Melté Creamery — The Artisan Ice Cream Cart of Your Dreams</title>
-  <meta name="description" content="Artisan hand-churned ice cream & gelato cart. Catering pernikahan, ulang tahun, pop-up mingguan, dan langganan pint bulanan.">
+  <meta name="description" content="Artisan hand-churned ice cream & gelato cart. Catering pernikahan, ulang tahun, pop-up mingguan, dan langganan box bulanan.">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍨</text></svg>">
 </head>
 <body class="bg-grid-pattern">
   
   <div class="site-frame">
-    <!-- Top Announcement Ticker -->
     <div class="top-ticker">
       <span>🚚 JADWAL POP-UP MINGGU INI TELAH TERBIT! TEMUKAN GEROBAK KAMI DI KOTAMU ✨</span>
     </div>
@@ -48,7 +47,7 @@
     <div class="mobile-nav-drawer" id="mobileNavDrawer">
       <div class="mobile-nav-links">
         <a href="index.html" class="mobile-nav-link">Beranda</a>
-        <a href="menu.html" class="mobile-nav-link">Menu & Toko Pint</a>
+        <a href="menu.html" class="mobile-nav-link">Menu & Toko box</a>
         <a href="#schedule" class="mobile-nav-link js-open-location-modal">Temukan Gerobak</a>
         <a href="#catering" class="mobile-nav-link js-open-catering-modal">Catering & Event</a>
         <a href="#club" class="mobile-nav-link">The Scoop Club</a>
@@ -65,7 +64,6 @@
 
     <!-- MAIN CONTENT -->
     <main>
-      <!-- HERO SECTION -->
       <section class="hero-section">
         <div class="container">
           <div class="hero-grid">
@@ -74,14 +72,12 @@
               <span class="hero-badge">( ARTISAN HAND-CHURNED ICE CREAM & GELATO )</span>
               <h1 class="hero-title">The Artisan Ice Cream Cart of Your Dreams</h1>
               <p class="hero-desc">
-                Gerobak es krim vintage impianmu untuk pesta pernikahan, ulang tahun, katering korporat, pengiriman paket pint bulanan, dan pop-up manis setiap akhir pekan.
+                Gerobak es krim vintage impianmu untuk pesta pernikahan, ulang tahun, katering korporat, pengiriman paket box bulanan, dan pop-up manis setiap akhir pekan.
               </p>
 
               <div class="hero-cta-group">
                 <a href="#club" class="btn-pill btn-periwinkle">GABUNG SCOOP CLUB</a>
-                <a href="menu.html" class="btn-pill btn-maroon">LIHAT SEMUA RASA 🍦</a>
-
-                <!-- Doodled Curved Arrow pointing right to the cart visual -->
+                <a href="menu.html" class="btn-pill btn-maroon">LIHAT SEMUA RASA</a>
                 <div class="arrow-annotation" aria-hidden="true">
                   <svg viewBox="0 0 100 50" fill="none" stroke="var(--color-maroon)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M 5,20 Q 50,-10 90,32" />
@@ -91,13 +87,11 @@
               </div>
             </div>
 
-            <!-- Right Column: Vintage Ice Cream Cart Graphic & Floating Stickers -->
+            <!-- Right Columns -->
             <div class="hero-visual">
               <div class="cart-image-wrapper">
-                <!-- Handwritten Callout -->
-                <span class="handwritten-callout">catch me if you melt! 🍦</span>
-
-                <!-- Cute Floating Doodles & Stickers -->
+                <span class="handwritten-callout">catch me if you melt!</span>
+                <!-- Floating Doodles & Stickers -->
                 <div class="sticker sticker-cherry-top" aria-hidden="true">
                   <svg viewBox="0 0 60 60" width="44" height="44">
                     <path d="M22 25 C20 10, 30 5, 38 6 C32 15, 30 20, 36 28" fill="none" stroke="#2D6028" stroke-width="3" stroke-linecap="round"/>
@@ -116,28 +110,48 @@
                   </svg>
                 </div>
 
+                <div class="sticker sticker-icecream" aria-hidden="true">
+                 <svg viewBox="0 0 60 60" width="44" height="44">
+                 <!-- Ice cream -->
+                 <path d="M16 30 C10 27, 12 19, 19 18 C17 10, 25 5, 31 10 C35 3, 46 8, 44 17 C52 19, 52 28, 44 30 C42 33, 18 33, 16 30 Z"
+                 fill="#F7B8CE"
+                 stroke="#D982A5"
+                 stroke-width="2"
+                stroke-linejoin="round"/>
+
+                <!-- Cone -->
+                <path d="M16 29 L44 29 L32 55 Q30 58 28 55 Z"
+                  fill="#D9A066"
+                  stroke="#A96F3D"
+                  stroke-width="2"
+                  stroke-linejoin="round"/>
+
+                <!-- Cone pattern -->
+                <path d="M22 35 L34 47 M29 31 L39 41 M37 31 L26 51"
+                  stroke="#B77D4C"
+                  stroke-width="1.5"
+                  stroke-linecap="round"/>
+
+                <!-- Highlight -->
+                <ellipse cx="23" cy="18" rx="3" ry="5"
+                  fill="#FFE6EF"
+                  transform="rotate(-25 23 18)"/>
+              </svg>
+              </div>
+
                 <div class="sticker sticker-sparkle" aria-hidden="true">
                   <svg viewBox="0 0 30 30" width="28" height="28" fill="#F8C644">
                     <path d="M15 0 L18 11 L29 15 L18 19 L15 30 L12 19 L1 15 L12 11 Z"/>
                   </svg>
                 </div>
 
-                <!-- Handcrafted Vintage Ice Cream Truck Visual -->
                 <div class="truck-illustration-container" style="background: radial-gradient(circle, #FFF 0%, rgba(255,247,236,0) 70%); border-radius: 30px; padding: 15px;">
-                  <!-- High fidelity Vintage Ice Cream Cart Image -->
-                  <img 
-                    src="asset/standicecream.png"                    
-                    alt="Vintage Melté Artisan Ice Cream Cart" 
-                    class="cart-main-img" 
-                    style="border-radius: 24px; border: 2.5px solid var(--color-maroon); box-shadow: 0 16px 32px rgba(122, 25, 42, 0.2);"
-                  >
+                  <img src="asset/standicecream.png" alt="Vintage Melté Artisan Ice Cream Cart" class="cart-main-img">
                   <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px; padding: 0 10px;">
                     <span style="font-family: var(--font-handwriting); font-size: 1.5rem; color: var(--color-maroon);">Piaggio Ape Vintage Creamery</span>
                     <span style="font-size: 0.75rem; font-weight: 700; color: var(--color-maroon); letter-spacing: 0.1em; background: var(--color-peach); padding: 2px 10px; border-radius: var(--radius-pill); border: 1px solid var(--color-maroon);">★ FRESH DAILY</span>
                   </div>
                 </div>
-
-                <!-- Bottom Floating Cherry Sticker -->
                 <div class="sticker sticker-cherry-bottom" aria-hidden="true">
                   <svg viewBox="0 0 60 60" width="38" height="38">
                     <path d="M22 25 C20 10, 30 5, 38 6 C32 15, 30 20, 36 28" fill="none" stroke="#2D6028" stroke-width="3" stroke-linecap="round"/>
@@ -151,12 +165,10 @@
         </div>
       </section>
 
-      <!-- SECTION 2: CALENDAR / WEEKLY POP-UP SCHEDULE (NOTEBOOK BINDER CUTOUT) -->
+      <!-- SECTION 2: CALENDAR / WEEKLY POP-UP SCHEDULE -->
       <section class="schedule-section" id="schedule">
         <div class="container">
-          <!-- Notebook Sheet with Circular Punched Hole Binder Edge -->
           <div class="notebook-sheet">
-            <!-- Punched Binder Holes Row (Like spiral notebook in reference!) -->
             <div class="binder-holes-row" aria-hidden="true">
               <span class="binder-hole"></span>
               <span class="binder-hole"></span>
@@ -178,7 +190,6 @@
                 <p class="sub">LOKASI GEROBAK KELILING</p>
                 <h2 class="title">Jadwal Minggu Ini</h2>
               </div>
-
               <!-- 7 Days Grid -->
               <div class="schedule-table-wrap">
                 <div class="schedule-grid">
@@ -210,7 +221,7 @@
                     </div>
                   </div>
 
-                  <!-- Rab (Wed) - Active Circle Highlight like reference! -->
+                  <!-- Rab (Wed) -->
                   <div class="day-column active-today">
                     <svg class="hand-drawn-marker-circle" viewBox="0 0 140 180" fill="none" stroke="#7C8CE8" stroke-width="2.8" stroke-linecap="round" aria-hidden="true">
                       <path d="M 70, 18 C 22, 22, 12, 78, 18, 128 C 25, 168, 115, 172, 126, 124 C 134, 76, 118, 26, 68, 16 C 36, 12, 18, 58, 26, 108" />
@@ -284,15 +295,11 @@
                   </div>
                 </div>
               </div>
-
-              <!-- Find Us Today Action -->
               <button class="btn-pill btn-maroon js-open-location-modal">
                 📍 CEK TITIK LOKASI HARI INI
               </button>
             </div>
           </div>
-
-          <!-- Newsletter Ticker Banner (Pill shaped bar under notebook) -->
           <div class="schedule-ticker-bar">
             <span class="ticker-text">PSST! DAPATKAN JADWAL GEROBAK DI INBOX SETIAP MINGGU!</span>
             <form class="ticker-form js-newsletter-form">
@@ -303,65 +310,49 @@
         </div>
       </section>
 
-      <!-- SECTION 3: CATERING & PRIVATE EVENTS (VERTICAL AWNING STRIPES & POLAROID) -->
+      <!-- SECTION 3: CATERING & PRIVATE EVENTS -->
       <section class="catering-section" id="catering">
         <div class="container">
           <div class="catering-grid">
-            <!-- Left Side: Copy & Pricing Cloud Badges -->
+            <!-- Left Side -->
             <div class="catering-content">
               <span class="tagline-caps">WEDDINGS • BIRTHDAYS • CORPORATE • POP-UPS</span>
               <h2 class="catering-title">Acara Spesialmu Membutuhkan Ice Cream!</h2>
               <p class="catering-desc">
                 Catering es cream artisan dengan gerobak vintage estetis. Dilengkapi pramuesaji profesional, cone wafel buatan tangan, sendok biodegradable, dan pilihan rasa khusus sesuai tema acaramu.
               </p>
-
-              <!-- 3 Scalloped Price Cloud Badges (Matching reference!) -->
               <div class="price-badges-group">
-                <!-- Badge 1: Cart Fee -->
                 <div class="price-badge-item badge-peach">
                   <span class="badge-amount">3.5 Jt</span>
                   <span class="badge-label">CART FEE<br>(2 JAM)</span>
                 </div>
-
-                <!-- Badge 2: Per Guest -->
                 <div class="price-badge-item badge-maroon">
                   <span class="badge-amount">35 Rb</span>
                   <span class="badge-label">PER<br>TAMU</span>
                 </div>
-
-                <!-- Badge 3: Additional Hour -->
                 <div class="price-badge-item badge-pink">
                   <span class="badge-amount">850 Rb</span>
                   <span class="badge-label">PER JAM<br>TAMBAHAN</span>
                 </div>
               </div>
-
-              <!-- Modal Trigger for Event Calculator -->
               <div>
-                <button class="btn-pill btn-maroon js-open-catering-modal">
-                  ✨ HITUNG SIMULASI CATERING
-                </button>
+                <button class="btn-pill btn-maroon js-open-catering-modal"> HITUNG SIMULASI CATERING</button>
               </div>
             </div>
 
-            <!-- Right Side: Polaroid Photo with Washi Tape & Stamp -->
+            <!-- Right Side -->
             <div class="polaroid-frame-wrapper">
               <div class="polaroid-card">
-                <!-- Washi Tape Effect -->
                 <div class="washi-tape" aria-hidden="true"></div>
                 <div class="washi-tape-bottom" aria-hidden="true"></div>
-
-                <!-- Stamp Badge -->
                 <div class="stamp-badge">
                   <span>designed<br>to delight!</span>
                 </div>
-
                 <!-- Photo -->
                 <img 
-                  src="https://images.unsplash.com/photo-1501443762994-82bd5dace89a?w=600&auto=format&fit=crop&q=80" 
+                  src="asset/polaroid-photo.jpg"
                   alt="Melté Ice Cream Cart at Garden Wedding" 
-                  class="polaroid-img"
-                >
+                  class="polaroid-img">
 
                 <p class="polaroid-caption">Handcrafted for your sweetest days ♡</p>
               </div>
@@ -369,13 +360,10 @@
           </div>
         </div>
       </section>
-
-      <!-- CRENELLATED AESTHETIC DIVIDER (From Reference!) -->
       <div class="crenellated-divider" aria-hidden="true"></div>
 
-      <!-- SECTION 4: THE SCOOP CLUB / SUBSCRIPTION (PERIWINKLE BACKGROUND & SCALLOPED CARD) -->
+      <!-- SECTION 4: THE SCOOP CLUB -->
       <section class="scoop-club-section" id="club">
-        <!-- Floating Stickers in Scoop Club section matching reference -->
         <div class="sticker" style="top: 35px; left: 8%; width: 50px; --rot: -12deg;" aria-hidden="true">
           <svg viewBox="0 0 60 30" width="50" height="25">
             <path d="M 5,15 Q 25,2 45,15 Q 55,20 58,10 Q 56,20 58,25 Q 52,18 45,15 Q 25,28 5,15 Z" fill="#E84A5F" stroke="#B82E40" stroke-width="2"/>
@@ -405,30 +393,25 @@
 
         <div class="container">
           <div class="scalloped-container">
-            <!-- Heart Sticker on Card -->
             <div class="sticker-heart" aria-hidden="true">
               <span>Best of All<br>Sweetest<br>Perks ♡</span>
             </div>
-
-            <!-- Mini Logo Pill on top of card -->
             <div style="display: inline-block; background: var(--color-peach); border: 1.5px solid var(--color-maroon); border-radius: var(--radius-pill); padding: 3px 14px; margin-bottom: 12px; font-family: var(--font-serif); font-weight: 800; font-size: 0.95rem; color: var(--color-maroon);">
               Melté
             </div>
             <br>
 
-            <span class="scallop-stamp-pill">LANGGANAN PINT BULANAN</span>
+            <span class="scallop-stamp-pill">LANGGANAN ICE CREAM BULANAN</span>
             <h2 class="club-title">Join the Melté Scoop Club</h2>
             <div class="club-price">Rp 249.000 <span style="font-size: 1.1rem; font-family: var(--font-sans); font-weight: 500; color: var(--color-text-muted);">/ bulan</span></div>
 
             <p class="club-desc">
-              Nikmati kiriman 4 pint gelato artisan kurasi chef langsung ke depan pintumu setiap bulan. Dilengkapi packaging khusus thermal ice box yang dijamin beku hingga 6 jam!
+              Nikmati 4 box gelato pilihan dikirim langsung ke rumahmu setiap bulan. Dikemas khusus dengan thermal ice box untuk menjaga gelato tetap dingin hingga sampai di tanganmu.
             </p>
-
-            <!-- Perks Grid -->
             <div class="club-perks-grid">
               <div class="club-perk-item">
                 <span class="icon">📦</span>
-                <h4 class="heading">4 Pint Kurasi Eksklusif</h4>
+                <h4 class="heading">4 Varian Gelato Spesial</h4>
                 <p class="text">Kombinasi 2 rasa klasik favorit dan 2 rasa musiman rahasia dari test-kitchen kami.</p>
               </div>
 
@@ -446,7 +429,7 @@
             </div>
 
             <div>
-              <button class="btn-pill btn-maroon" onclick="addToCart({id: 'club-sub-01', name: 'Melté Scoop Club Membership', variant: 'Langganan 4 Pint/Bulan', price: 249000, img: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=150&auto=format&fit=crop&q=80'})">
+              <button class="btn-pill btn-maroon" onclick="addToCart({id: 'club-sub-01', name: 'Melté Scoop Club Membership', variant: 'Langganan 4 box/Bulan', price: 249000, img: 'https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=150&auto=format&fit=crop&q=80'})">
                 DAFTAR ANGGOTA SEKARANG
               </button>
             </div>
@@ -454,7 +437,7 @@
         </div>
       </section>
 
-      <!-- SECTION 5: CUSTOMER REVIEWS / LOVE NOTES -->
+      <!-- SECTION 5: CUSTOMER REVIEWS -->
       <section style="padding: 70px 0; background-color: var(--color-cream); border-top: 2px dashed rgba(122,25,42,0.2);">
         <div class="container" style="text-align: center;">
           <span class="tagline-caps">LOVE NOTES FROM OUR GUESTS</span>
@@ -496,7 +479,7 @@
           <div class="footer-brand">
             <span class="logo">Melté</span>
             <p class="desc">
-              Gerobak es krim artisan yang berdedikasi menghadirkan kebahagiaan manis di setiap sudut kota dan momen perayaan istimewa.
+              Gerobak es krim yang berdedikasi menghadirkan kebahagiaan manis di setiap sudut kota dan momen perayaan istimewa.
             </p>
           </div>
 
@@ -516,7 +499,7 @@
             <ul class="footer-links">
               <li>Sel - Jum: 14:00 - 20:00</li>
               <li>Sabtu - Minggu: 10:00 - 21:00</li>
-              <li>Senin: Dapur Produksi (Tutup)</li>
+              <li>Senin: Tutup</li>
               <li style="margin-top: 10px; color: var(--color-peach);">📍 Hubungi: +62 812-3456-7890</li>
             </ul>
           </div>
@@ -528,7 +511,7 @@
             </p>
             <div style="display: flex; gap: 10px;">
               <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">@melteicecream</a>
-              <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">TikTok</a>
+              <a href="#" class="btn-pill btn-pink" style="padding: 6px 14px; font-size: 0.75rem;">@melteid</a>
             </div>
           </div>
         </div>
@@ -579,8 +562,6 @@
         <label for="calcDate">Perkiraan Tanggal Acara:</label>
         <input type="date" id="calcDate" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1.5px solid var(--color-maroon); font-family: var(--font-sans); background: var(--color-white);">
       </div>
-
-      <!-- Live Calculated Result Box -->
       <div class="calc-result-box">
         <div style="font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; color: var(--color-maroon); text-transform: uppercase;">
           Estimasi Total Investasi Acara
@@ -597,7 +578,7 @@
     </div>
   </div>
 
-  <!-- MODAL 2: "FIND US TODAY" LOCATION MODAL -->
+  <!-- MODAL 2: LOCATION MODAL -->
   <div class="modal-overlay" id="locationModal" role="dialog" aria-modal="true" aria-labelledby="locationModalTitle">
     <div class="modal-window">
       <button class="modal-close-btn" id="closeLocationModal" aria-label="Tutup">✕</button>
@@ -697,7 +678,6 @@
     </div>
 
     <div class="cart-drawer-items" id="cartDrawerItems">
-      <!-- Injected by JavaScript -->
     </div>
 
     <div class="cart-drawer-footer">
